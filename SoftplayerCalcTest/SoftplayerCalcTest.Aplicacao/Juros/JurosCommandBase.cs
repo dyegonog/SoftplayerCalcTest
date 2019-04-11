@@ -1,4 +1,5 @@
 ﻿using SoftplayerCalcTest.Aplicacao._Base;
+using System;
 using System.Collections.Generic;
 
 namespace SoftplayerCalcTest.Aplicacao.Juros
@@ -7,6 +8,7 @@ namespace SoftplayerCalcTest.Aplicacao.Juros
     {
         public decimal ValorInicial { get; set; }
         public int Tempo { get; set; }
+        private const double Juros = 0.01;
 
         public IReadOnlyCollection<Notification> Notificacoes => Notifications;
 
@@ -20,7 +22,12 @@ namespace SoftplayerCalcTest.Aplicacao.Juros
 
         public decimal Calcular()
         {
-            return ValorInicial;
+            var jurosTempo = (decimal)Math.Pow(Juros + 1.0, Tempo);
+            var resultado = ValorInicial * jurosTempo;
+
+            var resultadoTruncado = string.Format("{0:0.00}", resultado);
+
+            return decimal.Parse(resultadoTruncado);
         }
     }
 }
