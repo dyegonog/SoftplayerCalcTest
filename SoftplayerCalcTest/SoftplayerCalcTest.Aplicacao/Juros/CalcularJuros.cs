@@ -8,7 +8,6 @@ namespace SoftplayerCalcTest.Aplicacao.Juros
     {
         public decimal ValorInicial { get; set; }
         public int Tempo { get; set; }
-        private const double Juros = 0.01;
 
         public IReadOnlyCollection<Notification> Notificacoes => Notifications;
 
@@ -18,16 +17,6 @@ namespace SoftplayerCalcTest.Aplicacao.Juros
             AddNotification(Assertion.IsGreaterThan(0, Tempo, nameof(Tempo)));
 
             return !HasNotifications();
-        }
-
-        public decimal Calcular()
-        {
-            var jurosTempo = (decimal)Math.Pow(Juros + 1.0, Tempo);
-            var valorFinal = ValorInicial * jurosTempo;
-
-            var valorFinalTruncado = string.Format("{0:0.00}", valorFinal);
-
-            return decimal.Parse(valorFinalTruncado);
         }
     }
 }

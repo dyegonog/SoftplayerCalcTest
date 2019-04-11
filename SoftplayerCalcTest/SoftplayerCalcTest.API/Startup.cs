@@ -3,9 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Swagger;
 using SoftplayerCalcTest.Aplicacao._Base;
 using SoftplayerCalcTest.Aplicacao.Juros;
-using Swashbuckle.AspNetCore.Swagger;
+using SoftplayerCalcTest.Dominio;
 
 namespace SoftplayerCalcTest.API
 {
@@ -30,7 +31,7 @@ namespace SoftplayerCalcTest.API
             });
 
             services.AddScoped<CommandHandler<CalcularJuros, NewResourceResponse>, JurosCommandHandler>();
-            //serviceCollection.AddScoped<CommandHandler<AdicionarProcesso, NewResourceResponse>, ProcessoCommandHandler>();
+            services.AddSingleton<IJuros, Juros>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

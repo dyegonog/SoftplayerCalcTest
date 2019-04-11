@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftplayerCalcTest.API", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftplayerCalcTest.Aplicacao", "SoftplayerCalcTest.Aplicacao\SoftplayerCalcTest.Aplicacao.csproj", "{BE3FEAF9-C1FB-4788-ADB7-70E5EDF1DD9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftplayerCalcTest.Dominio", "SoftplayerCalcTest.Dominio\SoftplayerCalcTest.Dominio.csproj", "{8A8E5750-6CF5-4603-9594-012EDD0896F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BE3FEAF9-C1FB-4788-ADB7-70E5EDF1DD9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE3FEAF9-C1FB-4788-ADB7-70E5EDF1DD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE3FEAF9-C1FB-4788-ADB7-70E5EDF1DD9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A8E5750-6CF5-4603-9594-012EDD0896F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A8E5750-6CF5-4603-9594-012EDD0896F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A8E5750-6CF5-4603-9594-012EDD0896F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A8E5750-6CF5-4603-9594-012EDD0896F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
