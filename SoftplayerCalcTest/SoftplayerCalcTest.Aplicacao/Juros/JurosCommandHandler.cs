@@ -2,9 +2,9 @@
 
 namespace SoftplayerCalcTest.Aplicacao.Juros
 {
-    public class JurosCommandHandler : CommandHandler<JurosCommandBase, NewResourceResponse>
+    public class JurosCommandHandler : CommandHandler<CalcularJuros, NewResourceResponse>
     {
-        public NewResourceResponse Executar(JurosCommandBase cmd)
+        public NewResourceResponse Executar(CalcularJuros cmd)
         {
             return NewResourceResponse.CreateSuccess(cmd.Calcular());
         }

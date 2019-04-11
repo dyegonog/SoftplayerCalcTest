@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace SoftplayerCalcTest.Aplicacao.Juros
 {
-    public class JurosCommandBase : Notifiable, Command
+    public class CalcularJuros : Notifiable, Command
     {
         public decimal ValorInicial { get; set; }
         public int Tempo { get; set; }
@@ -23,11 +23,11 @@ namespace SoftplayerCalcTest.Aplicacao.Juros
         public decimal Calcular()
         {
             var jurosTempo = (decimal)Math.Pow(Juros + 1.0, Tempo);
-            var resultado = ValorInicial * jurosTempo;
+            var valorFinal = ValorInicial * jurosTempo;
 
-            var resultadoTruncado = string.Format("{0:0.00}", resultado);
+            var valorFinalTruncado = string.Format("{0:0.00}", valorFinal);
 
-            return decimal.Parse(resultadoTruncado);
+            return decimal.Parse(valorFinalTruncado);
         }
     }
 }

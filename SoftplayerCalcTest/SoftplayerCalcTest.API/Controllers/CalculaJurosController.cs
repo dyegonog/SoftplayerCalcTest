@@ -9,15 +9,15 @@ namespace SoftplayerCalcTest.API.Controllers
     [ApiController]
     public class CalculaJurosController : BaseController
     {
-        private readonly CommandHandler<JurosCommandBase, NewResourceResponse> _calcularJuros;
+        private readonly CommandHandler<CalcularJuros, NewResourceResponse> _calcularJuros;
 
-        public CalculaJurosController(CommandHandler<JurosCommandBase, NewResourceResponse> calcularJuros)
+        public CalculaJurosController(CommandHandler<CalcularJuros, NewResourceResponse> calcularJuros)
         {
             _calcularJuros = calcularJuros;
         }
 
         [HttpGet]
-        public IActionResult CalcularJuros([FromQuery] JurosCommandBase cmd)
+        public IActionResult CalcularJuros([FromQuery] CalcularJuros cmd)
         {
             return OkResponse(cmd, _calcularJuros);
         }

@@ -29,7 +29,7 @@ namespace SoftplayerCalcTest.API
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
 
-            services.AddScoped<CommandHandler<JurosCommandBase, NewResourceResponse>, JurosCommandHandler>();
+            services.AddScoped<CommandHandler<CalcularJuros, NewResourceResponse>, JurosCommandHandler>();
             //serviceCollection.AddScoped<CommandHandler<AdicionarProcesso, NewResourceResponse>, ProcessoCommandHandler>();
         }
 
