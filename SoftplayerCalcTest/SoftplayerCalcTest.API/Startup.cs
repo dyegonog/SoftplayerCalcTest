@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SoftplayerCalcTest.Aplicacao._Base;
+using SoftplayerCalcTest.Aplicacao.Juros;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace SoftplayerCalcTest.API
@@ -26,6 +28,9 @@ namespace SoftplayerCalcTest.API
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
+
+            services.AddScoped<CommandHandler<JurosCommandBase, NewResourceResponse>, Juros>();
+            //serviceCollection.AddScoped<CommandHandler<AdicionarProcesso, NewResourceResponse>, ProcessoCommandHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

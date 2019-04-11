@@ -1,24 +1,27 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
+using SoftplayerCalcTest.API.Controllers._Base;
+using SoftplayerCalcTest.Aplicacao._Base;
+using SoftplayerCalcTest.Aplicacao.Juros;
 
 namespace SoftplayerCalcTest.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CalculaJurosController : Controller
+    public class CalculaJurosController : BaseController
     {
-        private const decimal Precisao = 100;
-        private const double Juros = 0.01;
+        private readonly CommandHandler<JurosCommandBase, NewResourceResponse> _calcularJuros;
+
+        public CalculaJurosController(CommandHandler<JurosCommandBase, NewResourceResponse> calcularJuros)
+        {
+            _calcularJuros = calcularJuros;
+        }
 
         [HttpGet]
-        public decimal CalcularJuros([FromQuery] decimal valor, int tempo)
+        public IActionResult CalcularJuros([FromQuery] JurosCommandBase cmd)
         {
-            var jurosTempo = (decimal)Math.Pow(Juros + 1.0, tempo);
-            var resultado = valor * jurosTempo;
-
-            var resultadoTruncado = string.Format("{0:0.00}", resultado);
-
-            return decimal.Parse(resultadoTruncado);
+          
+            return OkResponse(cmd, _calcularJuros);
         }
     }
 }

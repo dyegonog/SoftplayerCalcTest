@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SoftplayerCalcTest.Aplicacao._Base
+﻿namespace SoftplayerCalcTest.Aplicacao._Base
 {
     public static class Assertion
     {

@@ -1,5 +1,4 @@
 ﻿using SoftplayerCalcTest.Aplicacao._Base;
-using System;
 using System.Collections.Generic;
 
 namespace SoftplayerCalcTest.Aplicacao.Juros
@@ -17,6 +16,11 @@ namespace SoftplayerCalcTest.Aplicacao.Juros
             AddNotification(Assertion.IsGreaterThan(0, Tempo, nameof(Tempo)));
 
             return !HasNotifications();
+        }
+
+        public decimal Calcular()
+        {
+            return ValorInicial;
         }
     }
 }
