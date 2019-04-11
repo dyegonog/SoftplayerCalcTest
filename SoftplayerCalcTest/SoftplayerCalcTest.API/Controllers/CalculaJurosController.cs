@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SoftplayerCalcTest.API.Controllers._Base;
 using SoftplayerCalcTest.Aplicacao._Base;
 using SoftplayerCalcTest.Aplicacao.Juros;
@@ -20,7 +19,6 @@ namespace SoftplayerCalcTest.API.Controllers
         [HttpGet]
         public IActionResult CalcularJuros([FromQuery] JurosCommandBase cmd)
         {
-          
             return OkResponse(cmd, _calcularJuros);
         }
     }
