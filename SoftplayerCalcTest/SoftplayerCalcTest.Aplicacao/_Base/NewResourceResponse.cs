@@ -4,7 +4,7 @@
     {
         public ResponseType ResponseType { get; private set; }
         public string Message { get; private set; }
-        public decimal NewId { get; private set; }
+        public decimal Resultado { get; private set; }
 
         private NewResourceResponse() { }
 
@@ -16,11 +16,11 @@
             return response;
         }
 
-        public static NewResourceResponse CreateSuccess(decimal id)
+        public static NewResourceResponse CreateSuccess(decimal resultado)
         {
             var response = new NewResourceResponse();
             response.ResponseType = ResponseType.Success;
-            response.NewId = id;
+            response.Resultado = resultado;
             return response;
         }
     }
