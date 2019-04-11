@@ -2,7 +2,7 @@
 
 namespace SoftplayerCalcTest.Aplicacao.Juros
 {
-    public class Juros : CommandHandler<JurosCommandBase, NewResourceResponse>
+    public class JurosCommandHandler : CommandHandler<JurosCommandBase, NewResourceResponse>
     {
         public NewResourceResponse Executar(JurosCommandBase cmd)
         {
