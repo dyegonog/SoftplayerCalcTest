@@ -2,13 +2,13 @@
 
 namespace SoftplayerCalcTest.Dominio
 {
-    public class Juros
+    public class JurosDomain
     {
         private const double PorcentagemDoJuros = 0.01;
         public int Tempo { get; set; }
         public decimal ValorInicial { get; set; }
 
-        public Juros(int tempo, decimal valorInicial)
+        public JurosDomain(int tempo, decimal valorInicial)
         {
             Tempo = tempo;
             ValorInicial = valorInicial;

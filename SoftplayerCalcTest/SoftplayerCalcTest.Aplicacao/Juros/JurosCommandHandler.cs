@@ -1,4 +1,5 @@
 ﻿using SoftplayerCalcTest.Aplicacao._Base;
+using SoftplayerCalcTest.Dominio;
 
 namespace SoftplayerCalcTest.Aplicacao.Juros
 {
@@ -6,7 +7,7 @@ namespace SoftplayerCalcTest.Aplicacao.Juros
     {
         public NewResourceResponse Executar(CalcularJuros cmd)
         {
-            var juros = new Dominio.Juros(cmd.Tempo, cmd.ValorInicial);
+            var juros = new JurosDomain(cmd.Tempo, cmd.ValorInicial);
             return NewResourceResponse.CreateSuccess(juros.Calcular());
         }
     }
