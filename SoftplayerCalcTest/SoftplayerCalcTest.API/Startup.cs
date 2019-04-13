@@ -31,7 +31,6 @@ namespace SoftplayerCalcTest.API
             });
 
             services.AddScoped<CommandHandler<CalcularJuros, NewResourceResponse>, JurosCommandHandler>();
-            services.AddSingleton<IJuros, Juros>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

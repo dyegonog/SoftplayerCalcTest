@@ -1,16 +1,23 @@
-﻿using SoftplayerCalcTest.Aplicacao.Juros;
-using System;
+﻿using System;
 
 namespace SoftplayerCalcTest.Dominio
 {
-    public class Juros : IJuros
+    public class Juros
     {
         private const double PorcentagemDoJuros = 0.01;
+        public int Tempo { get; set; }
+        public decimal ValorInicial { get; set; }
 
-        public decimal Calcular(CalcularJuros cmd)
+        public Juros(int tempo, decimal valorInicial)
         {
-            var jurosTempo = (decimal)Math.Pow(PorcentagemDoJuros + 1.0, cmd.Tempo);
-            var valorFinal = cmd.ValorInicial * jurosTempo;
+            Tempo = tempo;
+            ValorInicial = valorInicial;
+        }
+
+        public decimal Calcular()
+        {
+            var jurosTempo = (decimal)Math.Pow(PorcentagemDoJuros + 1.0, Tempo);
+            var valorFinal = ValorInicial * jurosTempo;
 
             var valorFinalTruncado = string.Format("{0:0.00}", valorFinal);
 

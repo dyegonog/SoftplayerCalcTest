@@ -4,16 +4,10 @@ namespace SoftplayerCalcTest.Aplicacao.Juros
 {
     public class JurosCommandHandler : CommandHandler<CalcularJuros, NewResourceResponse>
     {
-        private readonly IJuros _juros;
-
-        public JurosCommandHandler(IJuros juros)
-        {
-            _juros = juros;
-        }
-
         public NewResourceResponse Executar(CalcularJuros cmd)
         {
-            return NewResourceResponse.CreateSuccess(_juros.Calcular(cmd));
+            var juros = new Dominio.Juros(cmd.Tempo, cmd.ValorInicial);
+            return NewResourceResponse.CreateSuccess(juros.Calcular());
         }
     }
 }
