@@ -6,7 +6,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 using SoftplayerCalcTest.Aplicacao._Base;
 using SoftplayerCalcTest.Aplicacao.Juros;
-using SoftplayerCalcTest.Dominio;
 
 namespace SoftplayerCalcTest.API
 {

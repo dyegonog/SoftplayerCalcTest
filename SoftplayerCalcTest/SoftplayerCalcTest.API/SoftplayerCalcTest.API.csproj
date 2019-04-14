@@ -17,7 +17,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SoftplayerCalcTest.Aplicacao\SoftplayerCalcTest.Aplicacao.csproj" />
-    <ProjectReference Include="..\SoftplayerCalcTest.Dominio\SoftplayerCalcTest.Dominio.csproj" />
   </ItemGroup>
 
 </Project>
