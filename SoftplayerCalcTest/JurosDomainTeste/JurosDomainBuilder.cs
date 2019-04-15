@@ -1,24 +1,24 @@
 ﻿using SoftplayerCalcTest.Dominio;
 
-namespace SoftplayerCalcTest.TestesDeUnidade.Dominio
+namespace JurosDomainTeste
 {
-    public class JurosBuilder
+    public class JurosDomainBuilder
     {
         private int _tempo;
         private decimal _valorInicial;
 
-        public static JurosBuilder Novo()
+        public static JurosDomainBuilder Novo()
         {
-            return new JurosBuilder();
+            return new JurosDomainBuilder();
         }
 
-        public JurosBuilder ComTempo(int tempo)
+        public JurosDomainBuilder ComTempo(int tempo)
         {
             _tempo = tempo;
             return this;
         }
 
-        public JurosBuilder ComValorInicial(decimal valorInicial)
+        public JurosDomainBuilder ComValorInicial(decimal valorInicial)
         {
             _valorInicial = valorInicial;
             return this;

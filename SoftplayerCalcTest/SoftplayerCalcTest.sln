@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftplayerCalcTest.Aplicaca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftplayerCalcTest.Dominio", "SoftplayerCalcTest.Dominio\SoftplayerCalcTest.Dominio.csproj", "{8A8E5750-6CF5-4603-9594-012EDD0896F5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EC6654CA-3094-4975-80E5-5AF38A1E00BD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{ADDB5283-C349-4084-A9A1-A828C5601688}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftplayerCalcTest.TestesDeUnidade", "SoftplayerCalcTest.TestesDeUnidade\SoftplayerCalcTest.TestesDeUnidade.csproj", "{A4AA85F5-EA3D-4F62-8108-6DA4CD4B0683}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{AB6DF511-9CE8-4ADC-9340-BDC3FE192D8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JurosDomainTestes", "JurosDomainTeste\JurosDomainTestes.csproj", "{EB1A7D75-7B10-4985-99FB-C459AE1A21B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,16 +33,17 @@ Global
 		{8A8E5750-6CF5-4603-9594-012EDD0896F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A8E5750-6CF5-4603-9594-012EDD0896F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A8E5750-6CF5-4603-9594-012EDD0896F5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A4AA85F5-EA3D-4F62-8108-6DA4CD4B0683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A4AA85F5-EA3D-4F62-8108-6DA4CD4B0683}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A4AA85F5-EA3D-4F62-8108-6DA4CD4B0683}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A4AA85F5-EA3D-4F62-8108-6DA4CD4B0683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB1A7D75-7B10-4985-99FB-C459AE1A21B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB1A7D75-7B10-4985-99FB-C459AE1A21B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB1A7D75-7B10-4985-99FB-C459AE1A21B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB1A7D75-7B10-4985-99FB-C459AE1A21B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{A4AA85F5-EA3D-4F62-8108-6DA4CD4B0683} = {EC6654CA-3094-4975-80E5-5AF38A1E00BD}
+		{AB6DF511-9CE8-4ADC-9340-BDC3FE192D8F} = {ADDB5283-C349-4084-A9A1-A828C5601688}
+		{EB1A7D75-7B10-4985-99FB-C459AE1A21B9} = {AB6DF511-9CE8-4ADC-9340-BDC3FE192D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1BBD7018-DE2D-4F3D-A98E-705FA843B09B}
